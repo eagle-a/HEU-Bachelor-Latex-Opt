@@ -370,3 +370,7 @@ __pycache__/
 # Keep important .ist files for glossaries
 !main.ist
 !heuthesis.ist
+
+# Keep important template files
+!spine.docx
+!spine.pdf

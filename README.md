@@ -66,6 +66,8 @@
 ```
 .
 ├── main.tex              # 主文件，设置文档类和全局选项
+├── spine.docx            # 书脊模板文件（Word格式，需手动转PDF）
+├── spine.tex             # 书脊LaTeX源文件
 ├── front/
 │   └── cover.tex         # 封面信息配置（论文标题、作者、导师等）
 ├── body/
@@ -204,6 +206,8 @@ make cleanall
 build.bat
 ```
 
+**注意**：脚本会提示您手动处理 `spine.docx` 文件，请按照提示操作。
+
 #### 方式三：手动编译
 
 ```bash
@@ -281,12 +285,37 @@ xelatex main.tex
    正文内容\cite{key}。
    ```
 
-### 10. 生成最终论文
+### 10. 书脊制作
+
+本项目提供了两种书脊制作方式：
+
+#### 方式一：使用 Word 模板（推荐）
+
+1. **编辑 spine.docx**
+   - 打开 `spine.docx` 文件
+   - 修改论文标题、作者姓名等信息
+   - 调整字体和布局符合要求
+
+2. **转换为 PDF**
+   ```bash
+   # 方法1：使用 Microsoft Word 手动另存为 PDF
+   # 方法2：使用 LibreOffice 命令行
+   libreoffice --headless --convert-to pdf spine.docx
+   ```
+
+#### 方式二：使用 LaTeX 源文件
+
+编辑 `spine.tex` 文件，然后编译：
+```bash
+xelatex spine.tex
+```
+
+### 11. 生成最终论文
 
 编译完成后会生成以下 PDF 文件：
 - `main.pdf` - 论文主体
-- `spine.pdf` - 书脊
-- `thesis.pdf` - 完整论文（含书脊）
+- `spine.pdf` - 书脊（需要从 spine.docx 转换）
+- `thesis.pdf` - 完整论文（含书脊，需要 spine.pdf 存在）
 
 **A3 封面打印**：
 编译 `a3cover.tex` 可生成 A3 横向打印封面，用于论文装订。
