@@ -1,10 +1,12 @@
-# HEUThesis - 哈尔滨工程大学学位论文 LaTeX 模板
+# HEUThesis - 哈尔滨工程大学本科毕业论文 LaTeX 模板
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![LaTeX](https://img.shields.io/badge/LaTeX-2021+-blue.svg)](https://www.latex-project.org/)
 [![XeLaTeX](https://img.shields.io/badge/XeLaTeX-3.1+-green.svg)](https://texlive.org/)
 
-哈尔滨工程大学本硕博学位论文 XeLaTeX 模板，严格遵循学校论文格式规范要求。支持本科、硕士、博士、博士后各级学位论文撰写。
+哈尔滨工程大学**本科**毕业论文 XeLaTeX 模板，严格遵循学校论文格式规范要求。
+
+> 本项目基于 [Li-Wenhui/HEUThesis](https://github.com/Li-Wenhui/HEUThesis) 进行特化优化，专门针对本科生毕业论文需求进行定制开发。
 
 ## 📋 目录
 
@@ -20,7 +22,7 @@
 ## ✨ 项目特色
 
 - 🎯 **规范严格**: 完全符合哈尔滨工程大学论文格式规范
-- 📚 **全面支持**: 支持本科、硕士、博士、博士后各级学位论文
+- 🎓 **专注本科**: 专门针对本科生毕业论文格式要求优化
 - 🌐 **跨平台**: 支持 Windows、macOS、Linux 系统
 - 🎨 **字体丰富**: 支持多种字体配置，自动检测系统字体
 - 📖 **文档完善**: 详细的使用说明和示例代码
@@ -91,17 +93,14 @@
 \documentclass[type=bachelor,fontset=windows]{heuthesisbook}
 ```
 
-**必填选项** (type)：
-- `bachelor` - 本科论文
-- `master` - 硕士论文
-- `doctor` - 博士论文
-- `postdoc` - 博士后报告
+**文档类型**：
+- 本项目已固定为 `type=bachelor`，专门用于本科生毕业论文
 
 **选填选项**：
 - `fontset=windows|mac|ubuntu|fandol|adobe` - 字体设置
 - `tocfour=true|false` - 是否添加四级目录（本科文科可能需要）
 - `subtitle=true|false` - 是否有副标题
-- `openright=true|false` - 章节首页是否奇数页开始（博士打印版）
+- `openright=true|false` - 章节首页是否奇数页开始
 - `pageempty=true|false` - 空白页是否无页眉页脚
 - `engtoc=true|false` - 是否需要英文目录
 
@@ -311,14 +310,15 @@ xelatex main.tex
 ## 📝 更新日志
 
 ### v3.0.15 (2026-04-14)
-- ✨ 统一项目维护者信息为 eagle-a
+- ✨ 专门针对本科生毕业论文进行特化优化
+- 🎯 基于 Li-Wenhui/HEUThesis 项目进行定制开发
 - 🔧 优化 .gitignore 文件，添加项目特定忽略规则
 - 📚 完善文档结构和使用说明
 - 🎨 改进 README.md 的可读性和导航体验
 - 🐛 修复已知问题，提升模板稳定性
 
 ### v3.0.14 (2021-05-06)
-- 🎯 初始版本发布
+- 🎯 初始版本发布（基于 Li-Wenhui/HEUThesis）
 - 📖 完整的 LaTeX 模板实现
 - 🌐 跨平台编译支持
 
