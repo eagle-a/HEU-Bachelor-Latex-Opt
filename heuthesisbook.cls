@@ -9,7 +9,6 @@
 %% This is a generated file.
 %% 
 %% Copyright (C) 2021-2026 by LIWenhui <lwh@hrbeu.edu.cn>
-%% Modified (C) 2026 by eagle-a <sunzhaoshun@hrbeu.edu.cn>
 %% 
 %% This file may be distributed and/or modified under the
 %% conditions of the LaTeX Project Public License, either version 1.3a
@@ -1473,7 +1472,6 @@
   \vskip12bp
   \heu@put@keywords{\ifheu@postdoc\bfseries\fi\heiti\heu@ckeywords@title}{\heu@ckeywords}
   \ifheu@openright\cleardoublepage\else\clearpage\fi
-  \clearpage
   \begin{center}
     ~\\
     \xiaoer\textbf{\eabstractcname}

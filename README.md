@@ -110,7 +110,7 @@
 ### 1. 配置文档类选项 (main.tex)
 
 ```latex
-\documentclass[type=bachelor,fontset=windows]{heuthesisbook}
+\documentclass[type=bachelor,fontset=windows,library=true]{heuthesisbook}
 ```
 
 **选填选项**：
