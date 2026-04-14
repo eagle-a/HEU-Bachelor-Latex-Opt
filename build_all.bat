@@ -9,7 +9,6 @@ xelatex main.tex
 xelatex main.tex
 
 @echo make cover......
-xelatex spine.tex
 xelatex a3cover.tex
 xelatex thesis.tex
 
