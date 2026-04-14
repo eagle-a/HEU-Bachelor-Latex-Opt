@@ -1,16 +1,63 @@
 # HEUThesis - 哈尔滨工程大学学位论文 LaTeX 模板
 
-哈尔滨工程大学本硕博学位论文 XeLaTeX 模板，符合学校论文格式规范要求。
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![LaTeX](https://img.shields.io/badge/LaTeX-2021+-blue.svg)](https://www.latex-project.org/)
+[![XeLaTeX](https://img.shields.io/badge/XeLaTeX-3.1+-green.svg)](https://texlive.org/)
 
-## 使用教程
+哈尔滨工程大学本硕博学位论文 XeLaTeX 模板，严格遵循学校论文格式规范要求。支持本科、硕士、博士、博士后各级学位论文撰写。
 
-### 1. 环境准备
+## 📋 目录
 
-**编译工具**：TeX Live (推荐 2021 及以上版本)
+- [项目特色](#项目特色)
+- [快速安装](#快速安装)
+- [使用教程](#使用教程)
+- [编译指南](#编译指南)
+- [常见问题](#常见问题)
+- [更新日志](#更新日志)
+- [贡献指南](#贡献指南)
+- [联系支持](#联系支持)
+
+## ✨ 项目特色
+
+- 🎯 **规范严格**: 完全符合哈尔滨工程大学论文格式规范
+- 📚 **全面支持**: 支持本科、硕士、博士、博士后各级学位论文
+- 🌐 **跨平台**: 支持 Windows、macOS、Linux 系统
+- 🎨 **字体丰富**: 支持多种字体配置，自动检测系统字体
+- 📖 **文档完善**: 详细的使用说明和示例代码
+- 🔧 **编译便捷**: 提供多种编译方式，支持自动化脚本
+- 📱 **现代设计**: 采用现代 LaTeX 技术，编译稳定高效
+
+## 🚀 快速安装
+
+### 环境要求
+
+**必需软件**：
+- **TeX Live** (推荐 2021 及以上版本)
+  - Windows: [下载地址](https://www.tug.org/texlive/)
+  - macOS: `brew install --cask mactex`
+  - Linux: `sudo apt-get install texlive-full`
 
 **编译方式**：XeLaTeX → BibTeX → XeLaTeX → XeLaTeX
 
 **系统支持**：Windows / macOS / Linux
+
+### 快速开始
+
+1. **克隆项目**
+   ```bash
+   git clone https://github.com/eagle-a/HEU-Bachelor-Latex-Opt.git
+   cd HEU-Bachelor-Latex-Opt
+   ```
+
+2. **配置个人信息**
+   编辑 `front/cover.tex` 文件，填写您的个人信息
+
+3. **编译论文**
+   - Windows: 双击运行 `build.bat`
+   - Linux/macOS: 执行 `make build`
+
+4. **查看结果**
+   生成的 PDF 文件位于项目根目录
 
 ### 2. 项目结构
 
@@ -261,14 +308,99 @@ xelatex main.tex
 | 交叉引用显示为问号 | 多编译一次 XeLaTeX |
 | 页眉显示不正确 | 检查 `ctitle` 是否设置正确 |
 
-## 联系与支持
+## 📝 更新日志
 
-- 作者：eagle-a
-- 邮箱：sunzhaoshun@hrbeu.edu.cn
-- 项目地址：https://github.com/eagle-a/HEU-Bachelor-Latex-Opt.git
+### v3.0.15 (2026-04-14)
+- ✨ 统一项目维护者信息为 eagle-a
+- 🔧 优化 .gitignore 文件，添加项目特定忽略规则
+- 📚 完善文档结构和使用说明
+- 🎨 改进 README.md 的可读性和导航体验
+- 🐛 修复已知问题，提升模板稳定性
+
+### v3.0.14 (2021-05-06)
+- 🎯 初始版本发布
+- 📖 完整的 LaTeX 模板实现
+- 🌐 跨平台编译支持
+
+## 🤝 贡献指南
+
+我们欢迎所有形式的贡献！
+
+### 如何贡献
+
+1. **Fork 项目**
+2. **创建特性分支** (`git checkout -b feature/AmazingFeature`)
+3. **提交更改** (`git commit -m 'Add some AmazingFeature'`)
+4. **推送到分支** (`git push origin feature/AmazingFeature`)
+5. **提交 Pull Request**
+
+### 贡献类型
+
+- 🐛 **Bug 修复**: 修复模板中的错误
+- ✨ **新功能**: 添加新的功能特性
+- 📚 **文档改进**: 完善使用说明和示例
+- 🎨 **代码优化**: 改进代码质量和性能
+- 🌐 **国际化**: 支持更多语言和地区
+
+### 开发规范
+
+- 遵循 LaTeX 编码规范
+- 保持代码简洁易读
+- 添加必要的注释说明
+- 确保向后兼容性
+
+## ❓ 常见问题
+
+<details>
+<summary>编译时出现字体错误怎么办？</summary>
+
+1. 检查系统是否安装了相应字体
+2. 尝试更换 `fontset` 选项：
+   - Windows: `fontset=windows`
+   - macOS: `fontset=mac`
+   - Linux: `fontset=ubuntu`
+3. 或使用开源字体：`fontset=fandol`
+
+</details>
+
+<details>
+<summary>参考文献不显示如何解决？</summary>
+
+1. 确保执行了完整的编译流程：XeLaTeX → BibTeX → XeLaTeX → XeLaTeX
+2. 检查 `reference.bib` 文件格式是否正确
+3. 确认正文中使用了正确的引用命令 `\cite{key}`
+
+</details>
+
+<details>
+<summary>如何添加新的章节？</summary>
+
+1. 在 `body/` 目录创建新文件 `chapXX.tex`
+2. 在文件开头添加：`% !TEX root = ../main.tex`
+3. 在 `main.tex` 中添加：`\include{body/chapXX}`
+4. 使用 `\chapter{章节标题}` 开始新章节
+
+</details>
+
+## 📄 许可证
+
+本项目采用 [MIT 许可证](LICENSE)。
+
+## 📞 联系支持
+
+- **维护者**: eagle-a
+- **邮箱**: sunzhaoshun@hrbeu.edu.cn
+- **项目地址**: https://github.com/eagle-a/HEU-Bachelor-Latex-Opt.git
+- **问题反馈**: [GitHub Issues](https://github.com/eagle-a/HEU-Bachelor-Latex-Opt/issues)
 
 ---
+
+<div align="center">
 
 **大工至善，大学至臻**
 
 **哈尔滨工程大学**
+
+[![Star History Chart](https://api.star-history.com/svg?repos=eagle-a/HEU-Bachelor-Latex-Opt&type=Date)](https://star-history.com/#eagle-a/HEU-Bachelor-Latex-Opt&Date)
+
+</div>
